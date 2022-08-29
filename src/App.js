@@ -7,13 +7,12 @@ function App() {
 
   const addUserHandler = (newUser) => {
     setUsers((prevUsers) => [newUser, ...prevUsers]);
-    console.log(users);
   };
 
   return (
     <>
       <AddUser onAddUser={addUserHandler} />
-      <UsersList />
+      <UsersList usersList={users} />
     </>
   );
 }
