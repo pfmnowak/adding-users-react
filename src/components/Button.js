@@ -1,7 +1,11 @@
 import styles from "./Button.module.css";
 
 const Button = (props) => {
-  return <div className={styles.button}></div>;
+  return (
+    <button type={props.type} className={styles.button}>
+      {props.children}
+    </button>
+  );
 };
 
 export default Button;

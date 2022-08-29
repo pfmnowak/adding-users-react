@@ -1,7 +1,8 @@
+import Card from "../UI/Card";
 import styles from "./UsersList.module.css";
 
 const UsersList = (props) => {
-  return <div className={styles.users}>kutas</div>;
+  return <Card className={styles.users}></Card>;
 };
 
 export default UsersList;

@@ -3,9 +3,8 @@
   width: 90%;
   max-width: 40rem;
 
+  /* TEMP */
   height: 10vh;
-  background-color: #fff;
-  border-radius: 1rem;
 }
 
 .users ul {
