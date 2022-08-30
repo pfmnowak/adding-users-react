@@ -37,15 +37,27 @@ const AddUser = (props) => {
     }
 
     props.onAddUser([inputUserName, inputAge]);
+    setInputUserName("");
+    setInputAge("");
   };
 
   return (
     <Card className={styles.input}>
       <form onSubmit={formSubmitHandler}>
         <label htmlFor="name">Username</label>
-        <input id="name" type={"text"} onChange={inputUserNameHandler} />
+        <input
+          id="name"
+          type={"text"}
+          value={inputUserName}
+          onChange={inputUserNameHandler}
+        />
         <label htmlFor="age">Age (Years)</label>
-        <input id="age" type={"number"} onChange={inputAgeHandler} />
+        <input
+          id="age"
+          type={"number"}
+          value={inputAge}
+          onChange={inputAgeHandler}
+        />
         <Button type="submit">Add User</Button>
       </form>
     </Card>
