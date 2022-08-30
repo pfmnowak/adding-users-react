@@ -1,7 +1,7 @@
 import { useState } from "react";
+import Button from "../UI/Button";
 import Card from "../UI/Card";
 import styles from "./AddUser.module.css";
-import Button from "./Button";
 
 const AddUser = (props) => {
   const [inputUserName, setInputUserName] = useState("");
@@ -29,12 +29,12 @@ const AddUser = (props) => {
       return;
     }
 
-    if (inputAge.trim().length === 0 || inputAge < 0) {
+    if (inputAge.trim().length === 0 || +inputAge < 1) {
       props.onAgeInvalid(true);
       return;
     }
 
-    props.onAddUser([inputUserName, inputAge]);
+    props.onAddUser({ name: inputUserName, age: inputAge });
     setInputUserName("");
     setInputAge("");
   };

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Card from "../UI/Card";
 import Button from "./Button";
+import Card from "./Card";
 import styles from "./ErrorModal.module.css";
 
 const ErrorModal = (props) => {
@@ -34,19 +34,17 @@ const ErrorModal = (props) => {
 
   return (
     <>
-      <div className={styles.backdrop}></div>
+      <div className={styles.backdrop} onClick={hideModal}></div>
       <Card className={styles.modal}>
-        <div className={styles.header}>
+        <header className={styles.header}>
           <h2>Invalid input</h2>
-        </div>
-        <div className={styles.content}>
-          {message}
-          <div className={styles.actions}>
-            <Button type="button" onClick={hideModal}>
-              Okay
-            </Button>
-          </div>
-        </div>
+        </header>
+        <div className={styles.content}>{message}</div>
+        <footer className={styles.actions}>
+          <Button type="button" onClick={hideModal}>
+            Okay
+          </Button>
+        </footer>
       </Card>
     </>
   );

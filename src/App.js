@@ -1,7 +1,7 @@
 import { useState } from "react";
-import AddUser from "./components/AddUser";
-import ErrorModal from "./components/ErrorModal";
-import UsersList from "./components/UsersList";
+import ErrorModal from "./components/UI/ErrorModal";
+import AddUser from "./components/Users/AddUser";
+import UsersList from "./components/Users/UsersList";
 
 function App() {
   const [users, setUsers] = useState([]);
